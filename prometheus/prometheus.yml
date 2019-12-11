@@ -64,3 +64,20 @@ scrape_configs:
     
 #     static_configs:
 #          - targets: ['node-exporter:9100']
+
+  - job_name: 'athenz-ppp'
+
+    scrape_interval: 5s
+    honor_labels: true
+
+    static_configs:
+         - targets: ['___your_host___:8181']
+
+  # - job_name: 'pushgateway'
+  #   scrape_interval: 5s
+  #   honor_labels: true
+  #   dns_sd_configs:
+  #   - names:
+  #     - 'tasks.pushgateway'
+  #     type: 'A'
+  #     port: 9091
