@@ -15,7 +15,7 @@ status() {
     docker stack ps prom
 }
 
-select i in start stop exit
+select i in start stop status exit
 do
     case $i in
         start) start ${@:1};;
